@@ -1,0 +1,24 @@
+{
+  "name": "znyts",
+  "version": "1.0.0",
+  "main": "main.js",
+  "author": "lyt",
+  "description": "a demo create by lyt",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-packager . znyts --asar --win --out target --overwrite",
+    "package32": "electron-packager . znyts --asar --platform=win32 --arch=ia32 --out target --overwrite",
+    "package64": "electron-packager . znyts --asar --platform=win32 --arch=x64 --out target --overwrite --icon=favicon.ico"
+  },
+  "devDependencies": {
+    "electron": "^4.1.0",
+    "electron-packager": "^13.1.1",
+    "grunt": "^1.0.3",
+    "grunt-electron-installer": "^2.1.0"
+  },
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "electron-squirrel-startup": "^1.0.0",
+    "os": "^0.1.1"
+  }
+}

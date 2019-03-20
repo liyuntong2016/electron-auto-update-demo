@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <style>
+      body,html{
+        margin:0;padding:0;
+      }
+    </style>
+  </head>
+  <body>
+    <div>第一个electron 项目</div>
+    <button id="update">update</button>
+    <script>
+      //render请求main的数据
+      const { ipcRenderer } = require('electron')
+      ipcRenderer.send('asynchronous-message', 'ping');
+      update.onclick=function(){
+        ipcRenderer.send('check-for-update');
+      }
+      // console.log("更新成功");
+    </script>
+  </body>
+</html>
